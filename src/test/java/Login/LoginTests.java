@@ -11,7 +11,7 @@ public class LoginTests {
     private WebDriver driver;
 
     //import chromeDriver
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
 
@@ -36,7 +36,7 @@ public class LoginTests {
         driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div[2]/div[2]/form/div/div[3]/button")).click();
 
 
-        Thread.onSpinWait();
+        Thread.sleep(10000);
         //close the  after test
         driver.quit();
     }
